@@ -3,7 +3,6 @@ import CardTemplate from '../CardTemplate/CardTemplate'
 import Api from '../../Services/dataService.js'
 import { Row, Col } from 'antd'
 import { Spin } from 'antd';
-// import Slider from "react-slick";
 import './Showfilms.css'
 
 export default class Showfilms extends Component {
@@ -27,13 +26,11 @@ export default class Showfilms extends Component {
               searchValue: ''
             })
           })
-          // this.props.handleSearch(false, '','');
   }
   genreFilter() {
     let genreResult = this.state.results.filter(show => show.genres && show.genres.some(g => g === this.state.genre))
  console.log("Result...",genreResult);
  this.setState({results: genreResult, genre: ''})
-//  this.props.handleSearch(false, '','');
   }
   handleApiCall (props) {
     this.setState({isLoading: true})
@@ -74,7 +71,6 @@ export default class Showfilms extends Component {
                 <Col className='gutter-row' span={6} xs={24} sm={8} md={6} lg={6} xl={6} key={film.id}>               
                   <CardTemplate
                     name={film.name && film.name}
-                    date={film.premiered&& film.premiered}
                     image={film.image && film.image.medium}
                     id={film.id && film.id}
                     rating={film.rating.average/2}

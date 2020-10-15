@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 import { Input, Col, Row, Button, Select } from 'antd'
-// import { Redirect } from 'react-router-dom'
 import './SearchForm.css'
-// import Showfilms from '../Showfilms/Showfilms'
 import { genresFilter } from '../../Services/utilsService'
 const { Option } = Select;
 
 export default class SearchForm extends Component {
   constructor (props) {
-    super(props)
-
+    super(props)    
     this.state = {
       value: '',
       isSearch: false,
@@ -24,15 +21,14 @@ export default class SearchForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.setState({ fireRedirect: true,isSearch: true }, () =>this.props.handleSearch(true,this.state.value,this.state.Genres)
+    this.setState({ isSearch: true }, () =>this.props.handleSearch(true,this.state.value,this.state.Genres)
   )
   }
   handleSelectChange = (value,event) => {
-    this.setState({fireRedirect: true, Genres: value},() =>  this.props.handleSearch(true,'',this.state.Genres))
+    this.setState({ Genres: value},() =>  this.props.handleSearch(true,'',this.state.Genres))
    
   }
   render () {
-    const { fireRedirect, value: query, Genres } = this.state
     return (
       <div className="container">
       <Row justify ='content-around'>

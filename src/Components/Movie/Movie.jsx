@@ -2,21 +2,14 @@
 import React, { Component } from 'react'
 import { Row, Col, Rate, Tag,Button } from 'antd'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Utils from '../../Services/utilsService'
 import Api from '../../Services/dataService'
 
 import './Movie.css'
 const ButtonGroup = Button.Group;
-type State = {
-  name: number,
-  description: string,
-  urlImage: string,
-  stars: number,
-  genres: [],
-  release_date: string,
-}
 
-export default class Movie extends Component <State> {
+export default class Movie extends Component {
   constructor (props) {
     super(props)
 
@@ -97,3 +90,11 @@ export default class Movie extends Component <State> {
     )
   }
 }
+Movie.propTypes = { 
+  name: PropTypes.number,
+  description: PropTypes.string,
+  urlImage: PropTypes.string,
+  stars: PropTypes.number,
+  genres:  PropTypes.array,
+  release_date: PropTypes.string,
+};
