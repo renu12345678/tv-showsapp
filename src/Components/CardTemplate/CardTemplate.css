@@ -1,0 +1,15 @@
+.custom-image img {
+  display: block;
+}
+.custom-card {
+  padding: 10px 16px;
+}
+.custom-card p {
+  color: #999;
+}
+.custom-style {
+  margin: '5%',
+}
+.ant-card-body {
+  padding: 0% !important;
+}
