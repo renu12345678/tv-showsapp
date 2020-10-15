@@ -18,8 +18,11 @@ const mockedEvent = { e: { preventDefault : {}} }
 let wrapper = mount(<Showfilms {...props}/>);
 describe('Home', () => {
 
-  it('should render the Title Component correctly', () => {   
+  it('should render the Component correctly', () => {   
     expect(wrapper.find('div')).not.toBe(null);
+    expect(wrapper.find('Row')).not.toBe(null);
+    expect(wrapper.find('Col')).not.toBe(null);
+
   });
 
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, configure,mount  } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { MemoryRouter } from 'react-router-dom'
 import Movie from './Movie';
 
 
@@ -15,9 +16,14 @@ const props = {
     language: '',
     handleSearch: jest.fn()
 }
+const prop1 =   {
+  "history":{"length":50,"action":"PUSH","location":{"pathname":"/movie/82","search":"","hash":"","key": "zm6voz",}},
+  "location":{"pathname":"/movie/82","search":"","hash":"","key": "zm6voz",},
+  "match":{"path":"/movie/:id","url":"/movie/82","isExact":true,"params":{"id":"82"}}}
+
 const mockedEvent = { e: { preventDefault : {}} }
 
-let wrapper = mount(<Movie {...props}/>);
+let wrapper = mount(<MemoryRouter><Movie {...props} {...prop1}/></MemoryRouter>);
 describe('Movie', () => {
 
   it('should render the Title Component correctly', () => {   

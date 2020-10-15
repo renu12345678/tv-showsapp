@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import Adapter from 'enzyme-adapter-react-16';
 import Navbar from './Navbar';
-import { MemoryRouter,BrowserRouter  } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 
 
 configure({adapter: new Adapter()});
@@ -20,18 +20,13 @@ const props = {
 }
 const mockedEvent = { e: { preventDefault : {}} }
 
-let wrapper = mount(<Navbar {...props}/>);
+let wrapper = mount(<MemoryRouter><Navbar {...props}/></MemoryRouter>);
 describe('Navbar', () => {
 
   it('should render the Title Component correctly', () => {   
     expect(wrapper.find('Menu')).not.toBe(null);
   });
   it('should render one <h1>', () => {
-    const wrapper = mount(
-      <BrowserRouter >
-        <Navbar />
-      </BrowserRouter >
-    );
-    expect(wrapper.find('h1').length).toBe(1);
+    expect(wrapper.find('h2').length).toBe(1);
   });
 });
