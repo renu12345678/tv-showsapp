@@ -1,8 +1,7 @@
 /* @flow */
 import React, { Component } from 'react'
 import { Row, Col, Rate, Tag,Button } from 'antd'
-import  Icon  from '@ant-design/icons'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Utils from '../../Services/utilsService'
 import Api from '../../Services/dataService'
 
@@ -15,7 +14,6 @@ type State = {
   stars: number,
   genres: [],
   release_date: string,
-  videoId: number
 }
 
 export default class Movie extends Component <State> {
@@ -56,7 +54,7 @@ export default class Movie extends Component <State> {
         <Link to="/">
         <ButtonGroup>
           <Button type="primary" style={{margin: '4%'}}>
-            <Icon type="left" />Go back
+            Go back
           </Button>
         </ButtonGroup>
         </Link>

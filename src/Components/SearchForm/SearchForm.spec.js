@@ -17,13 +17,15 @@ const mockedEvent = { e: { preventDefault : {}} }
 
 let wrapper = mount(<SearchForm {...props}/>);
 describe('Home', () => {
-
+  const event = { preventDefault: () => {} }
+  jest.spyOn(event, 'preventDefault')
   it('should render the Title Component correctly', () => {   
     expect(wrapper.find('div')).not.toBe(null);
   });
   it('should render the Title Component correctly', () => {
     wrapper.instance().handleSelectChange('drame', '');
-    wrapper.instance().handleSubmit(mockedEvent);
+    wrapper.find('form').simulate('submit', event)
+    expect(event.preventDefault).toBeCalled()
     expect(wrapper.find('Row')).not.toBe(null);
   });
 
