@@ -7,7 +7,6 @@ import SearchForm from './SearchForm';
 configure({adapter: new Adapter()});
 const props = {
     gutter : "0 ",
-    justify :"center-around",
     genre: '',
     isSearch: false,
     searchValue: '',

@@ -8,7 +8,10 @@ import { MemoryRouter } from 'react-router-dom'
 
 configure({adapter: new Adapter()});
 const props = {
-  handleSearch: jest.fn()
+  name:'GOT',
+  image: "",
+  id: 2,
+  rating: 4
 }
 let wrapper = mount(<MemoryRouter><CardTemplate {...props}/> </MemoryRouter>);
 describe('CardTemplate', () => {

@@ -6,7 +6,7 @@ import { Menu } from 'antd'
 
 export default function Navbar () {
   return (
-    <Menu mode='horizontal' style={{background: 'darkslategray'}}>
+    <Menu mode='horizontal' style={{background: '#141b28'}}>
       <Menu.Item >
         <Link to='/'>
           <h2 style={{color:'white'}}> Home </h2>

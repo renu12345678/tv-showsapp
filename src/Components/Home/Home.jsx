@@ -17,7 +17,6 @@ export default class Home extends Component {
   }
 
   render () {
-    // const {  value: query } = this.state
     return (
     <div className="container">
     <Row justify="center-around">

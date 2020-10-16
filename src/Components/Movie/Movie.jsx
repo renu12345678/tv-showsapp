@@ -52,10 +52,10 @@ export default class Movie extends Component {
         </ButtonGroup>
         </Link>
       <Row gutter={16} style={{margin: '2%'}}>
-      <Col span={8} xs={{ span:24, offset: 0} } sm={{ span:8, offset: 1} } md={{ span:8, offset: 1} } lg={{ span:8, offset: 1} } xl={{ span:8, offset: 1} }>
+      <Col span={8} xs={{ span:24, offset: 0}} sm={{ span:8, offset: 1} } md={{ span:8, offset: 1} } lg={{ span:8, offset: 1} } xl={{ span:8, offset: 1} }>
           <img alt={this.state.name} width='85%' src={`${this.state.urlImage}`} />
         </Col>
-        <Col span={8} xs={{ span:24, offset: 0} } sm={{ span:8, offset: 1} } md={{ span:8, offset: 1} } lg={{ span:8, offset: 1} } xl={{ span:8, offset: 1} }>
+        <Col span={8} xs={{ span:24, offset: 0}} sm={{ span:8, offset: 1} } md={{ span:8, offset: 1} } lg={{ span:8, offset: 1} } xl={{ span:8, offset: 1} }>
           <h1 >{this.state.name}</h1>
           <hr />
           <strong  > Description: </strong>
@@ -75,12 +75,12 @@ export default class Movie extends Component {
           </div>
           <Rate className='rate' count={5}  disabled value={this.state.stars} />
           <hr />
-          <div className='trailer'>
+          <div>
             <strong > Language: </strong>
             <p> {this.state.language} </p>
           </div>
           <hr />
-          <div className='premiered'>
+          <div >
             <strong > premiered: </strong>
             <p> {this.state.release_date} </p>
           </div>

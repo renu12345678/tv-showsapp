@@ -61,7 +61,7 @@ export default class Showfilms extends Component {
     const{ results } =this.state
     const sortedRating = results && results.sort((a,b)=> b.rating.average - a.rating.average);
     return (
-      <div className ='example'>
+      <div >
       { this.state.isLoading ?  <Spin/>  :
       
         <Row gutter={16} style= {{marginLeft: '10%',marginRight: '10%', marginTop: '2%'}}>

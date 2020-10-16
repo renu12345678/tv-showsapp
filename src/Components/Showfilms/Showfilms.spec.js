@@ -7,7 +7,7 @@ import Showfilms from './Showfilms';
 configure({adapter: new Adapter()});
 const props = {
     gutter : "0 ",
-    justify :"center-around",
+    results:[],
     genre: '',
     isSearch: false,
     searchValue: '',
