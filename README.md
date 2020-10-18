@@ -47,7 +47,9 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
+### npm run test -- --coverage --watchAll=false
 
+    Covergae Report for all the testcase
 
 ### `npm run build`
 
