@@ -16,7 +16,6 @@ export default class SearchForm extends Component {
   }
 
   handleChange = (e) => {
-    e.preventDefault()
     this.setState({ value: e.target.value })
   }
 
@@ -33,15 +32,15 @@ export default class SearchForm extends Component {
     return (
       <div className="container">
       <Row justify ='content-around'>
-        <Col span={14} span={6} xs={{ span:24, offset: 0} } sm={{ span:8, offset: 5} } md={{ span:14, offset: 5} } lg={{ span:14, offset: 5} } xl={{ span:14, offset: 5} }>
-          <form onSubmit={this.handleSubmit}>
-            <Input className='input' style={{width: '60%', borderRadius:'18px'}} placeholder='Search Shows...' onChange={this.handleChange} />
-            <Button type="primary" style={{ borderRadius:'20px'}} onClick={this.handleSubmit}>Search</Button>
+        <Col span={14} span={6} xs={{ span:24, offset: 0} } sm={{ span:14, offset: 5} } md={{ span:14, offset: 5} } lg={{ span:14, offset: 5} } xl={{ span:14, offset: 5} }>
+          <form className='searchform' onSubmit={this.handleSubmit}>
+            <Input className='input'  placeholder='Search Shows...' onChange={this.handleChange} />
+            <Button type="primary" className='search_button'  onClick={this.handleSubmit}>Search</Button>
           </form>
           </Col>
-          <Col span={14} span={6} xs={{ span:24, offset: 0} } sm={{ span:8, offset: 5} } md={{ span:14, offset: 5} } lg={{ span:14, offset: 5} } xl={{ span:14, offset: 5} }>
-          <h1 style={{display: 'inline-flex', marginRight: '20px'}}>Filter By Genres</h1>
-        {<Select placeholder= 'Select Genre...' style={{ width: '25%' }} onSelect={(value)=>this.handleSelectChange(value)}>
+          <Col span={14} span={6} xs={{ span:24, offset: 0} } sm={{ span:14, offset: 5} } md={{ span:14, offset: 5} } lg={{ span:14, offset: 5} } xl={{ span:14, offset: 5} }>
+          <h1 className='Genre_label'>Filter By Genres</h1>
+        {<Select className='select-label' placeholder= 'Select Genre...' onSelect={(value)=>this.handleSelectChange(value)}>
        { genresFilter.map((genre,id) => ( <Option value={genre.value} key={id}>{genre.value}</Option>) )}
         </Select>}
         </Col>

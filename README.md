@@ -3,7 +3,7 @@
 
 ### Project Description
 ```
-A simple Tv Shows Application can view popular and genere based shows and you can search and view the details of show. This project is developed in React JS .
+A simple Tv Shows Application can view popular and genere based shows and user can search and view the details of show, and also able to select genre and get the shows related to selected genre,This project is developed in React JS.
 ```
 
 
@@ -41,15 +41,15 @@ npm install
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
+
 You will also see any lint errors in the console.
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
-### npm run test -- --coverage --watchAll=false
 
-    Covergae Report for all the testcase
+### npm run test -- --coverage --watchAll=false
+Coverage Report for all the testcases.
 
 ### `npm run build`
 

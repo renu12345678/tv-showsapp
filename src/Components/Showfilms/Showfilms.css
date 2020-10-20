@@ -5,10 +5,13 @@
   font-family: 'Asap', sans-serif;
   font-size: 5em;
 }
-.example {
-  text-align: center;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  padding: 30px 50px;
-  margin: 20px 0;
+
+.cards_row{
+ margin: 2% 10%  !important
+}
+@media only screen and (max-width: 1024px) {
+  .example .cards_row{
+   margin: 2% 0 0 0 !important;
+   padding: 0 16px;
+ }
 }

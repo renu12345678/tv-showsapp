@@ -57,14 +57,13 @@ export default class Showfilms extends Component {
   }
 
   render () {
-    console.log("movies......", this.state.results);
     const{ results } =this.state
     const sortedRating = results && results.sort((a,b)=> b.rating.average - a.rating.average);
     return (
-      <div >
+      <div className='example'>
       { this.state.isLoading ?  <Spin/>  :
       
-        <Row gutter={16} style= {{marginLeft: '10%',marginRight: '10%', marginTop: '2%'}}>
+        <Row gutter={16} className='cards_row' >
           {
            sortedRating&& sortedRating.map(film => {
               return (
@@ -73,7 +72,7 @@ export default class Showfilms extends Component {
                     name={film.name && film.name}
                     image={film.image && film.image.medium}
                     id={film.id && film.id}
-                    rating={film.rating.average/2}
+                    rating={film.rating.average}
                   />     
                 </Col>
               )

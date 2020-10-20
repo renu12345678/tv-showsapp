@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
-import { Card,Rate } from 'antd'
+import { Card } from 'antd'
 
 const CardTamplate = ({ name, image, id, rating }) => (
-  <Link to={`/movie/${id}`}>
-    <Card style={{margin: '5%',border: '1px solid #e9e9e9'}}>
+  <Link to={`/ShowDetails/${id}`}>
+    <Card className='card-container' style={{ marginBottom : '16px', border: '1px solid #e9e9e9'}}>
      {image && <div className='custom-image'>
         <img alt={name} width='100%' src={`${image}`} />
       </div>}
@@ -13,9 +13,8 @@ const CardTamplate = ({ name, image, id, rating }) => (
         <h3>{name}</h3>
       </div>
       <div>
-        <h3>{rating}/5</h3>
+        <h3>{rating}</h3>
       </div>
-      <Rate className='rate' count={5} disabled  defaultValue={rating} />
     </Card>
   </Link>
 )

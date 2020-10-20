@@ -1,0 +1,73 @@
+img {
+  /* margin-top: 4%; */
+}
+roe {
+  margin: 10%;
+  display: inline-flex;
+}
+h1 {
+  margin-top: 2%;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  margin: 1em 0;
+  border-top: 1px solid #ccc;
+}
+.genere {
+  margin-top: 1%;
+  display: inline-flex;
+  color:white
+}
+.rating {
+  display: inline-flex;
+  margin-top: 1%;
+  color:white
+}
+.language {
+  display: inline-flex;
+  margin-top: 1%;
+  color:white
+}
+.languageTitle {
+  margin-right: 4%;
+  color:white
+}
+/* .premieredTitle {
+  margin-right: 4%;
+} */
+.premiered {
+  display: inline-flex;
+  margin-top: 1%;
+  color:white
+}
+.genereTitle {
+  margin-right: 4%;
+  color:white
+}
+.rate {
+  margin-top: 1%;
+  display: block;
+} 
+.description{
+  color:white
+}
+.descriptionTitle {
+  text-align: initial;
+  color:white;
+  padding: 6px;
+}
+.showTitle {
+  color: white
+}
+.showDetail {
+  margin: 2%;
+}
+.backButton {
+  margin: 4%
+}
+.container {
+  overflow: hidden
+}

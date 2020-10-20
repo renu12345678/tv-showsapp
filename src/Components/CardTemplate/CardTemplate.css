@@ -13,3 +13,7 @@
 .ant-card-body {
   padding: 0% !important;
 }
+.cardstyle {
+  margin-bottom : 16px !important;
+  border: 1px solid #e9e9e9
+}
