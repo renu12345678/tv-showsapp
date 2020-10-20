@@ -32,7 +32,7 @@ hr {
   color:white
 }
 .languageTitle {
-  margin-right: 4%;
+  margin-left: 5px;
   color:white
 }
 /* .premieredTitle {
@@ -42,6 +42,9 @@ hr {
   display: inline-flex;
   margin-top: 1%;
   color:white
+}
+.premieredTitle{
+  margin-left: 5px;
 }
 .genereTitle {
   margin-right: 4%;
@@ -70,4 +73,7 @@ hr {
 }
 .container {
   overflow: hidden
+}
+.labelValue {
+  margin-left: 5px
 }

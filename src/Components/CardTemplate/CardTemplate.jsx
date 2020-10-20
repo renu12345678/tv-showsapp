@@ -13,7 +13,7 @@ const CardTamplate = ({ name, image, id, rating }) => (
         <h3>{name}</h3>
       </div>
       <div>
-        <h3>{rating}</h3>
+        <h3>{rating ? rating : 'NA'}</h3>
       </div>
     </Card>
   </Link>

@@ -71,7 +71,7 @@ export default class ShowDetails extends Component {
           <hr />
           <div className='rating'>
             <strong > Rating: </strong>
-            <p> {this.state.stars ? this.state.stars: 'NA'}</p>
+            <p className='labelValue'> {this.state.stars ? this.state.stars: 'NA'}</p>
           </div>
           <hr />
           <div className='language'>
