@@ -1,17 +1,18 @@
 import axios from 'axios'
 
+export const baseURL = 'http://api.tvmaze.com/'
 
 export default {
   getShows: () => {
-    const url = `http://api.tvmaze.com/shows`
+    const url = `${baseURL}shows`
     return axios.get(url).then(info => info.data)
   },
   getSearch: (query) => {
-    const url =  `http://api.tvmaze.com/search/shows?q=${query}`
+    const url =  `${baseURL}search/shows?q=${query}`
     return axios.get(url).then(info => info.data)
   },
   getShowById: (showId) => {
-    const url = `http://api.tvmaze.com/shows/${showId}`
+    const url = `${baseURL}shows/${showId}`
     return axios.get(url).then(info => info.data)
   }
 }
