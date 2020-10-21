@@ -32,6 +32,7 @@ describe('ShowDetails', () => {
   it('should render the Title Component correctly', () => {
     wrapper.instance().componentDidMount();
     expect(wrapper.find('Row')).not.toBe(null);
+    expect(wrapper.find('ButtonGroup')).not.toBe(null);
   });
 
 });
